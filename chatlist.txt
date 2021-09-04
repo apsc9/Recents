@@ -1,0 +1,18 @@
+LRU Cache Chatlist :
+
+1. Intro 
+The inspiration comes from apps and recent calls on phone where in the list when we get a new mesage or call it is displayed on the top of list and all the remaining elements shift down by one.
+There are two key features in a chatlist : one is new message and the other is delete message .
+When a new message comes , it moves automatically to the top of the chatlist even though earlier messages in that thread existed while the other messages shift down by 1, if message was not present in the chatlist , then just shift the other messages down by one position .
+
+In case of delete message , we first find the position where that message is present in the chatlist, then delete the message and then subsequently move the messages below it by 1 in upward direction.
+
+We need a DS that can perform these operation : find , shift to front and delete
+
+We will have 2 mian files : one is chatlistHandler.js which handles all that is related to chat and implements the concept of LRU cache , it will handle all the operations of the chatlist and updates the chatlist when we get a new message or delete a previous message.
+ and the other is script.js which will replicates the actions performed by the users . We need to replicate the actions because this script will tell us whether we have to delete  a message or whether we have received a new message.
+
+
+3. Lru
+
+The most optimal is the belady's anomaly but we dont use that because we cant predict whether it is there or not in the future requests
